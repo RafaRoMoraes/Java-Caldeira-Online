@@ -23,11 +23,14 @@ public class Exercicio5 {
             }else{
                 System.out.println("Informe os segundos de agora: ");
                 seg = s.nextInt();
+                if(seg>60 || seg<0){
+                    System.out.println("Os dados estão incorretos!");
+                }else{
+                    seg = seg+(min*60)+(3600*hora);
 
-                seg = seg+(min*60)+(3600*hora);
-
-                System.out.println("Se passaram "+seg+" segundos a partir da meia noite!");
-                System.out.println("Faltam "+(segD-seg)+" segundos para a próxima meia noite");
+                    System.out.println("Se passaram "+seg+" segundos a partir da meia noite!");
+                    System.out.println("Faltam "+(segD-seg)+" segundos para a próxima meia noite");
+                }
             }
         }
     }
